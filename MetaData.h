@@ -1,43 +1,18 @@
+/**
+ *  Meta data
+ *  @desc : define all the meta data that are used to generate the features for machine learning models. 
+ *  @author : ylyang
+ *  @email : yangyulian202@gmail.com
+ *  @date : 2017-4-8
+ *
+*/
+
 #ifndef _METADATA_H_
 #define _METADATA_H_
-#include "Sample.h"
-#include <utility>
-
-#define METAOFFSETOF(element) offsetof(MetaData, element)
 
 namespace model
 {
-typedef struct
-{
-    uint32_t first;
-    uint32_t second;
-} TermPair;
-
-typedef struct
-{
-    TermPair * list;
-    uint32_t num;
-} TermPairList;
-
-typedef struct
-{
-    uint32_t termid;
-    uint32_t query_pos;
-    uint32_t ad_pos;
-} TermPos;
-
-typedef struct
-{
-    TermPos * list;
-    uint32_t num;
-} TermPosList;
-
-typedef struct
-{
-    float * list;
-    uint32_t num;
-} FloatList;
-
+// meta data struct
 typedef struct
 {
     uint32_t * list;
@@ -50,6 +25,7 @@ typedef struct
     uint32_t num;
 } Uint64List;
 
+// specify the meta data: should replace the following with the meta data in your case
 struct QueryMetaInfo
 {
     char* query_str;                                        ///< query
