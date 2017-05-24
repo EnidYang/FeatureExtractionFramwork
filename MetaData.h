@@ -73,7 +73,7 @@ struct UserMetaInfo
     // other info that may be useful
 };
     
-struct MetaFeatureData
+struct MetaData
 {                            
     QueryMetaInfo query;                             
     DocMetaInfo doc;                                                          
